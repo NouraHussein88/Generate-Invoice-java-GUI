@@ -130,6 +130,8 @@ public class ActionController implements ActionListener, ListSelectionListener {
         if (selectionRow != -1) {
             parentUI.getInvoiceHeaderArray().remove(selectionRow);
             parentUI.getInvoiceHeaderTableModule().fireTableDataChanged();
+            parentUI.getInvoiceTable().updateUI();
+            parentUI.getInvoiceHeaderTableModule().fireTableDataChanged();       
         }
     }
 
